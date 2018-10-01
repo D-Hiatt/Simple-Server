@@ -36,7 +36,7 @@ namespace SimpleServer
                     listener.Bind(localEndPoint);
                     listener.Listen(100);
 
-                    while (true)
+                    while (!s_States.IsAddingCompleted)
                     {
                         allDone.Reset();
 
